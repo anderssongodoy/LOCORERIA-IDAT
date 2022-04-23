@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QMainWindow" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+font-family: century gothic;
+}
+
+QFrame#Contenedor{
+border-radius: 150px;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(116, 0, 81, 255), stop:1 rgba(102, 64, 255, 255));
+}
+
+QToolButton#iconologin{
+background: none;
+background transparent;
+border-radius:15px;
+}
+
+QLabel{
+font-weight: bold;
+color: white;
+font-size : 18px
+}
+
+QLineEdit{
+background: transparent;
+border: none;
+border-bottom: 1px solid white;
+color: white;
+}
+
+QPushButton#logearse{
+background: #219ebc;
+color: white;
+border-radius: 15px;
+font-weight: bold;
+font-size: 16px;
+}
+
+QPushButton#logearse:hover{
+background: white;
+color: black;
+}
+
+QFrame#barra{
+background-color:white;
+border-radius:10px;
+}
+
+QPushButton#cerrar{
+background: transparent;
+}
+
+QPushButton#cerrar:hover{
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(116, 0, 81, 255), stop:1 rgba(102, 64, 255, 255));
+}
+
+QPushButton#minimizar{
+background: transparent;
+}
+
+QPushButton#minimizar:hover{
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(116, 0, 81, 255), stop:1 rgba(102, 64, 255, 255));
+}
+
+
+QProgressBar{
+background-color: rgba(0,0,0,0%);
+border-radius:25px;
+border:1px solid #00007f;
+}
+
+QProgressBar::chunk{
+background-color: qlineargradient(spread:reflect, x1:0.995263, y1:0.563, x2:0,y2:0.574, stop:0.301843 rgba(11,255,240,255), stop:1 rgba (68,0,127,255));
+border-radius:25px;
+}
+
+
+QLabel#error{
+color:red;
+font-size:18px;
+}
+
+QLabel#sistema{
+color:black;
+}
+
+QFrame#circularprogress{
+border-radius:90px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.774194 rgba(85, 170, 255, 0), stop:0.775 rgba(85, 170, 255, 255));
+}
+
+QFrame#circularbg{
+border-radius:90px;
+background-color: rgba(77,77,127,120);
+}
+
+QFrame#container{
+border-radius:80px;
+background-color: rgb(77,77,127);
+}
+
+#vino{
+background: transparent;
+}
+
+#mensaje{
+background: transparent;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="Contenedor">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>404</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QToolButton" name="iconologin">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>181</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMAGES/login.png</normaloff>../IMAGES/login.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="usuariot">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>century gothic</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Usuario</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="contrat">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>260</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Contraseña</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="usuario">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>311</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>usuario</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="contra">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>290</y>
+       <width>311</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>***********</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logearse">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>330</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>LOGIN</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="barra">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>341</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="sistema">
+        <property name="text">
+         <string>SISTEMA DE VENTAS</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="espaciador">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="minimizar">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../IMAGES/minimizar.png</normaloff>../IMAGES/minimizar.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cerrar">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../IMAGES/cerrar.png</normaloff>../IMAGES/cerrar.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="fondo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>380</y>
+       <width>401</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="vino">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>201</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../IMAGES/vino.png</normaloff>../IMAGES/vino.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="error">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="mensaje">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>-10</y>
+        <width>181</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../IMAGES/error.png</normaloff>../IMAGES/error.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>200</width>
+        <height>200</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>vino</zorder>
+     <zorder>mensaje</zorder>
+     <zorder>error</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
