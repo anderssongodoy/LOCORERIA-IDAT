@@ -29,7 +29,7 @@ class VentanaMenu(QMainWindow):
         self.maximizar.clicked.connect(self.control_maximizar)
         self.minimizar.clicked.connect(self.control_minimizar)
         self.cerrar.clicked.connect(lambda: self.close())
-        self.restaurar.hide()
+        #self.restaurar.hide()
 
         # sizegrip ( redimensionar )
         self.gripSize = 10
