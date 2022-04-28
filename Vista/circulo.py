@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect
 from PyQt5.QtGui import QColor
 from PyQt5 import QtCore
 from PyQt5.uic import loadUi
-from Vista.menus import VentanaMenu
+from Vista.ventanaMenu import VentanaMenu
 
 #Globales
 counter = 0
